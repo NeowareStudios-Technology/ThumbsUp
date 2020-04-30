@@ -19,6 +19,7 @@ import SendPost from "./App/SendPost/SendPost"
 import SignupLogin from "./App/SignupLogin/SignupLogin"
 import TemplateSelection from "./App/TemplateSelection/TemplateSelection"
 import UserSettings from "./App/UserSettings/UserSettings"
+import UserHome from "./App/UserHome/UserHome"
 import UserSignupCompletion from "./App/UserSignupCompletion/UserSignupCompletion"
 import UserThankYou from "./App/UserThankYou/UserThankYou"
 import { AppLoading, DangerZone } from "expo"
@@ -52,8 +53,15 @@ const PushRouteOne = createStackNavigator({
 	UserThankYou: {
 		screen: UserThankYou,
 	},
+	UserSignupCompletion: {
+		screen: UserSignupCompletion,
+	},
+	UserHome: {
+		screen: UserHome,
+	},
+
 }, {
-	initialRouteName: "ImageUplaod",
+	initialRouteName: "SignupLogin",
 })
 
 const RootNavigator = createStackNavigator({

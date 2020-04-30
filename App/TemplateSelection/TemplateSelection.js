@@ -7,7 +7,7 @@
 //
 
 import React from "react"
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import { Image, StyleSheet, Text, TouchableOpacity, View,BackHandler  } from "react-native"
 
 
 export default class TemplateSelection extends React.Component {
@@ -26,9 +26,6 @@ export default class TemplateSelection extends React.Component {
 		super(props)
 	}
 
-	componentDidMount() {
-
-	}
 
 	onContinueButtonPressed = () => {
 
@@ -38,15 +35,18 @@ export default class TemplateSelection extends React.Component {
 	}
 
 	onTemplate3Pressed = () => {
-
+		const { navigate } = this.props.navigation
+		navigate("ImageUplaod")
 	}
 
 	onTemplate2Pressed = () => {
-
+		const { navigate } = this.props.navigation
+		navigate("ImageUplaod")
 	}
 
 	onTemplate1Pressed = () => {
-
+		const { navigate } = this.props.navigation
+  		navigate("ImageUplaod")
 	}
 
 	render() {
@@ -77,12 +77,12 @@ export default class TemplateSelection extends React.Component {
 					style={{
 						flex: 1,
 					}}/>
-				<TouchableOpacity
+				{/*<TouchableOpacity
 					onPress={this.onContinueButtonPressed}
 					style={styles.continueButtonButton}>
 					<Text
 						style={styles.continueButtonButtonText}>Continue</Text>
-				</TouchableOpacity>
+				</TouchableOpacity>*/}
 			</View>
 	}
 }

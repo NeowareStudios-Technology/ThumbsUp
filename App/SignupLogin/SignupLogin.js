@@ -38,7 +38,8 @@ export default class SignupLogin extends React.Component {
 	}
 
 	onContinueButtonPressed = () => {
-
+		const { navigate } = this.props.navigation
+		navigate("UserSignupCompletion")
 	}
 
 	render() {

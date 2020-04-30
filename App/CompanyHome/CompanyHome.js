@@ -5,12 +5,15 @@
 //  Created by [Author].
 //  Copyright © 2018 [Company]. All rights reserved.
 //
+import React from "react";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, BackHandler  } from "react-native"
 
-import React from "react"
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native"
+import HandleBack from '../../Modules/back.js'
+
 
 
 export default class CompanyHome extends React.Component {
+	
 
 	static navigationOptions = ({ navigation }) => {
 
@@ -26,9 +29,7 @@ export default class CompanyHome extends React.Component {
 		super(props)
 	}
 
-	componentDidMount() {
 
-	}
 
 	onCreateNewTemplatePressed = () => {
 
@@ -37,9 +38,14 @@ export default class CompanyHome extends React.Component {
 		navigate("TemplateSelection")
 	}
 
+	onBack = () => {
+		return true;
+	};
+
 	render() {
 
-		return <View
+		return <HandleBack onBack={this.onBack}>
+				<View
 				style={styles.viewView}>
 				<ScrollView
 					horizontal={true}
@@ -621,6 +627,7 @@ export default class CompanyHome extends React.Component {
 						style={styles.createNewTemplateButtonImage}/>
 				</TouchableOpacity>
 			</View>
+			</HandleBack>
 	}
 }
 

@@ -31,11 +31,13 @@ export default class UserSignupCompletion extends React.Component {
 	}
 
 	onInterestedInACompPressed = () => {
-	
+		const { navigate } = this.props.navigation
+		navigate("CompanySignupCompletion")
 	}
 
 	onContinueButtonPressed = () => {
-	
+		const { navigate } = this.props.navigation
+		navigate("UserHome")
 	}
 
 	render() {
